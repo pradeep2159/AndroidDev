@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/reminder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:lines="5" 
+        android:padding="3dp"
+        android:background="@drawable/text_bg"/>
+
+    <RelativeLayout
+        android:id="@+id/datetime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reminder" >
+
+        <Button
+            android:id="@+id/btnDate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Set Date"
+            android:textColor="#fff"
+            android:layout_margin="5dp"
+            android:background="@drawable/date_bg" >
+        </Button>
+
+        <Button
+            android:id="@+id/btnTime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnDate"
+            android:text="Set Time" 
+            android:textColor="#fff"
+             android:layout_margin="5dp"
+            android:background="@drawable/date_bg">
+        </Button>
+
+        <TextView
+            android:id="@+id/lblDateAndTime"
+            android:layout_width="fill_parent"
+            android:layout_height="40px"
+            android:layout_below="@+id/btnTime"
+            android:background="#f7f7f7"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            android:textStyle="bold" >
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/datetime" >
+
+        <Button
+            android:id="@+id/reminder_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:text="Save" 
+            android:background="@drawable/addgreen"/>
+
+        <Button
+            android:id="@+id/reminder_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:text="Cancel"
+            android:background="@drawable/cancelred" />
+    </RelativeLayout>
+
+</RelativeLayout>

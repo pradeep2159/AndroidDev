@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/smsscreen_bg" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_ph"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:background="@drawable/edittext_bg" >
+
+        <EditText
+            android:id="@+id/editTextPhoneNo"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/textbox"
+            android:hint="Enter Phone no."
+            android:maxLines="5"
+            android:padding="3dp"
+            android:phoneNumber="true"
+            android:scrollbars="vertical"
+            android:numeric="integer" >
+        </EditText>
+
+        <Button
+            android:id="@+id/addHere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/find_bg"
+            android:text="Find"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bot"
+        android:layout_below="@+id/rl_ph"
+        android:layout_marginBottom="10dp"
+         >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_ph"
+                android:layout_margin="5dp" >
+
+                <EditText
+                    android:id="@+id/editTextSMS"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/smstextfield"
+                    android:gravity="top"
+                    android:hint="Enter SMS Text"
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/sms_size"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editTextSMS"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="12dp" >
+                </TextView>
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/sms_datetime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frame" >
+
+                <Button
+                    android:id="@+id/sms_btnDate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/date_bg"
+                    android:text="Set Date" >
+                </Button>
+
+                <Button
+                    android:id="@+id/sms_btnTime"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sms_btnDate"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/time_bg"
+                    android:text="Set Time" >
+                </Button>
+            </RelativeLayout>
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sms_datetime"
+                android:layout_margin="5dp"
+                android:background="@drawable/spinner_bg"
+                android:entries="@array/send_arrays"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:prompt="@string/send_prompt"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/buttonSend"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/topbar"
+            android:text="Send"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+
+

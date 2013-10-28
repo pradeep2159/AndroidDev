@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/id_bottom_contact_rl"
+        android:layout_below="@+id/header" >
+
+        <RelativeLayout
+            android:id="@+id/id_rl_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/id_rl_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="1"
+                    android:background="@drawable/contacts_tab"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight="1"
+                    android:background="@drawable/groups_tab"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_my_search"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/id_rl_2"
+                android:background="@drawable/gray_gradient_title_bg" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginBottom="-5dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dip"
+                    android:addStatesFromChildren="true"
+                    android:background="@android:drawable/edit_text"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical" >
+
+                    <ImageButton
+                        android:id="@+id/button_search"
+                        style="@android:style/Widget.Button.Inset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="3dip"
+                        android:layout_marginRight="3dip"
+                        android:layout_marginTop="3dip"
+                        android:background="@drawable/ic_menu_search"
+                        android:contentDescription="@string/searchname"
+                        android:padding="2dip" />
+
+                    <EditText
+                        android:id="@+id/input_search_query"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_toRightOf="@+id/button_search"
+                        android:background="@null"
+                        android:hint="@string/searchname"
+                        android:maxLines="1"
+                        android:paddingLeft="4dip"
+                        android:paddingRight="4dip"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/id_rl_3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/topbar" >
+
+            <Button
+                android:id="@+id/addCont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/addbtn"
+                android:text="Add" />
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/addbtn"
+                android:text="Cancel" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/id_rl_3"
+            android:layout_below="@id/id_rl_1" >
+        </ListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_bottom_contact_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>
